@@ -1,0 +1,425 @@
+html {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+
+}
+/* настраиваем хидер*/
+.mainHeader {
+    width: auto;
+    min-height: 900px;
+    height: auto;
+    height: 1000px;
+    margin: 0;
+background-image: url("../pictures/background images/NASA3.jpg");
+background-size: cover;
+
+transform: scale(1);
+transition-duration: 10s;
+    font-family: 'Oswald', sans-serif;
+
+
+}
+.mainHeader:hover {
+
+transform: scale(1.2);
+transition-duration: 120s;
+
+
+}
+.mainHeader:hover .moveNav {
+    transform: translateX(150px);
+
+    transition-duration: 120s;
+}
+.mainHeader:hover .social{
+    transform: translateX(-150px);
+
+    transition-duration: 120s;
+
+}
+.mainHeader:hover .sign{
+    transform: translateY(-50px);
+    transition-duration: 120s;
+}
+.logo {
+
+width: 200px;
+height: 200px;
+
+margin: auto;
+margin-top: 100px;
+
+
+
+}
+.logo>a{
+display: inline-block;
+width: 200px;
+height: 200px;
+background-image: url("../pictures/Logo images/ logo.png");
+background-size: cover;
+
+}
+/* создаём меню*/
+nav {
+    float: left;
+    transition-duration: 10s;
+
+    width: 100px;
+    margin-top: 100px;
+    margin-left: 50px;
+
+}
+
+.menu-icon span {
+    height: 12px;
+    background-color: white;
+    display: block;
+    width: 100%;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+.menu-icon span::before,
+.menu-icon span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 12px;
+    background-color: white;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+.menu-icon span::before {
+transform: translate(0, -24px);
+}
+
+.menu-icon span::after {
+transform: translate(0,12px);
+}
+
+.moveNav:hover span::after{
+    transform: translate(45px, 12px) rotate(-45deg);
+    width: 60%;
+}
+/* меню крутится*/
+.moveNav:hover span::before{
+    transform: translate(45px, -24px) rotate(45deg);
+    width: 60%;
+}
+.moveNav:hover span {
+    transform: rotate(360deg);
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+.menu-icon {
+    transform: scale(0.3);
+}
+/* всплываюшие меню*/
+
+.moveNav:hover .menuButton{
+    display: block;
+    transition-property: scale ;
+    transform: scale(1.2);
+
+    transition-duration: 0.7s;
+}
+.menuButton{
+    transform: scale(0);
+    display: none;
+    width: 120px;
+    height: 100%;
+    color: white;
+    list-style: none;
+    margin-left: 40px;
+    margin-bottom: 10px;
+
+}
+.menuButton>a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color:white;
+}
+.menuButton>a:hover{
+
+    text-decoration: none;
+    color:deepskyblue;
+}
+.rotateNav{
+    position: relative;
+    top: -20px;
+}
+
+
+
+
+
+.social {
+float: right;
+    transition-duration: 10s;
+
+color: white;
+    margin-top: 100px;
+    margin-right: 50px;
+
+}
+.social>a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-collapse: collapse;
+    border-radius: 50%;
+}
+
+.social>a:nth-child(1){
+    background-image: url("../pictures/social icons/facebook.png") ;
+    background-size: cover;
+}
+.social>a:nth-child(2){
+    background-image:url("../pictures/social icons/linkedin.png") ;
+    background-size: cover;
+}
+.social>a:nth-child(3){
+    background-image:url("../pictures/social icons/youtube.png") ;
+    background-size: cover;
+}
+.social>a:nth-child(4){
+    background-image: url("../pictures/social icons/vimeo.png");
+    background-size: cover;
+}
+/* при наведении на кнопки они немного увеличиваются и светятся*/
+.social>a:nth-child(1):hover{
+    box-shadow: 0 0 20px lightblue;
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+.social>a:nth-child(2):hover{
+    box-shadow: 0 0 20px lightblue;
+    transform: scale(1.2);
+
+    transition-duration: 1s;
+
+}
+.social>a:nth-child(3):hover{
+    box-shadow: 0 0 20px red;
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+.social>a:nth-child(4):hover{
+    box-shadow: 0 0 20px lightblue;
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+.sign {
+max-width: 830px;
+margin: auto;
+margin-top: 100px;
+font-size: 53px;
+color: white;
+text-transform: uppercase;
+font-family: 'Oswald', sans-serif;
+text-align: center;
+    transition-duration: 10s;
+
+}
+.sign >p:nth-child(2) {
+text-align: center;
+font-size: 30px;
+font-family: 'Oswald', sans-serif;
+font-style: italic ;
+text-transform: none;
+font-weight: 300;
+}
+
+
+
+
+/*Настраиваем мэйн*/
+
+main {
+    height: auto;
+    background-color: black;
+    width: auto;
+    padding-left: -15px;
+    padding-right: -15px;
+}
+main>.myWorks{
+    height:400px;
+    border-collapse: collapse;
+}
+main>.myWorks:nth-child(3){
+
+    background-image: url("../pictures/portfolio pictures/touth.jpg") ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+
+}
+main>.myWorks:nth-child(1) {
+
+    background-image: url("../pictures/portfolio pictures/tesla.png") ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+
+}
+main>.myWorks:nth-child(2){
+
+    background-image: url("../pictures/portfolio pictures/commux.jpg") ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+
+}
+main>.skills{
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    min-height: 200px;
+    height: auto;
+    background-image: url("../pictures/background images/NASA3.jpg");
+    background-size: auto;
+    padding-top: 80px ;
+    margin-bottom: 80px;
+}
+main>.skills>p{
+    font-size: 50px;
+    margin-top: -20px;
+}
+.skills>div:nth-child(3){
+    text-transform: none;
+
+}
+main>.skills>div:hover {
+    color: deepskyblue;
+    transform: scale(1.1);
+    transition-duration: 1s;}
+
+.information{
+
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    color: white;
+
+}
+.information>p{
+
+    font-size: 40px;
+    text-transform: uppercase;
+
+}
+.information>span{
+    font-size: 18px;
+    font-weight: 300;
+    color: lightgrey;
+
+}
+.map{
+    width: auto;
+  height: 550px;
+    background-color: black;
+    background-image: url("../pictures/background images/map.png");
+    background-repeat: no-repeat ;
+    background-size: 100%;
+    margin-top: 80px;
+}
+
+footer{
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+
+    color: black;
+}
+
+.aboutMe{
+    color: lightgrey;
+    height: 400px;
+    background-color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+
+
+}
+.aboutMe>p{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+.aboutMe>.photo{
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    top:-60px;
+    background-image:url("../pictures/my photo/twrylimy9fM.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.moreInfo {
+    font-family: 'Oswald', sans-serif;
+    background-color: white;
+
+    height: 200px;
+}
+.moreInfo>.rights {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 300;
+
+    width: auto;
+    height: auto;
+    float: left;
+}
+.moreInfo>.contacts {
+    margin-top: 40px;
+    float: right;
+}
+
+.contacts>a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    border-collapse: collapse;
+    border-radius: 50%;
+}
+.contacts>a:nth-child(1){
+    background-image: url("../pictures/social icons/facebook.png") ;
+    background-size: cover;
+}
+.contacts>a:nth-child(2){
+    background-image:url("../pictures/social icons/linkedin.png") ;
+    background-size: cover;
+}
+.contacts>a:nth-child(3){
+    background-image:url("../pictures/social icons/youtube.png") ;
+    background-size: cover;
+}
+.contacts>a:nth-child(4){
+    background-image: url("../pictures/social icons/vimeo.png");
+    background-size: cover;
+}
+footer>p{
+    text-align: center;
+    margin-bottom: 0;
+}
