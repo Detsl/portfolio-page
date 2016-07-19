@@ -256,7 +256,8 @@ main {
     padding-right: -15px;
 }
 main>.myWorks{
-    height:400px;
+    min-height:400px;
+    height: auto;
     border-collapse: collapse;
 }
 main>.myWorks:nth-child(3){
